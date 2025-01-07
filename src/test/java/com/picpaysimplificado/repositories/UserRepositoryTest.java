@@ -30,7 +30,7 @@ class UserRepositoryTest {
     @DisplayName("Should get User successfully from DB")
     void findUserByDocumentCase1() {
         String document = "99999999902";
-        UserDTO data = new UserDTO("Fernanda", "Teste", document, new BigDecimal(10), "test@gmail.com", "44444", UserType.COMMON);
+        UserDTO data = new UserDTO("João Victor", "Teste", document, new BigDecimal(10), "test@gmail.com", "44444", UserType.COMMON);
         this.createUser(data);
 
         Optional<User> result = this.userRepository.findUserByDocument(document);
